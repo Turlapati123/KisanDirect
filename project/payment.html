@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanDirect - Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body class="payment-body">
+    <div class="payment-container">
+        <div class="payment-header">
+            <h2>Select Payment Method</h2>
+            <div class="order-summary">
+                <p>Order Total: <span id="orderTotal">₹0</span></p>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <div class="payment-method" onclick="showPaymentForm('upi')">
+                <div class="method-icon">📱</div>
+                <div class="method-details">
+                    <h3>UPI Payment</h3>
+                    <p>Pay using any UPI app</p>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="showPaymentForm('card')">
+                <div class="method-icon">💳</div>
+                <div class="method-details">
+                    <h3>Card Payment</h3>
+                    <p>Credit/Debit Card</p>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="showPaymentForm('netbanking')">
+                <div class="method-icon">🏦</div>
+                <div class="method-details">
+                    <h3>Net Banking</h3>
+                    <p>All major banks supported</p>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="showPaymentForm('cod')">
+                <div class="method-icon">💰</div>
+                <div class="method-details">
+                    <h3>Cash on Delivery</h3>
+                    <p>Pay when you receive</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- UPI Payment Form -->
+        <div id="upiForm" class="payment-form" style="display: none;">
+            <h3>UPI Payment</h3>
+            <div class="upi-apps">
+                <div class="upi-app" onclick="selectUPIApp('gpay')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_pay_logo.svg/2560px-Google_pay_logo.svg.png" alt="Google Pay">
+                    <span>Google Pay</span>
+                </div>
+                <div class="upi-app" onclick="selectUPIApp('phonepe')">
+                    <img src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png" alt="PhonePe">
+                    <span>PhonePe</span>
+                </div>
+                <div class="upi-app" onclick="selectUPIApp('paytm')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paytm_Logo_%28standalone%29.svg/2560px-Paytm_Logo_%28standalone%29.svg.png" alt="Paytm">
+                    <span>Paytm</span>
+                </div>
+            </div>
+            <form onsubmit="processUPIPayment(event)">
+                <div class="form-group">
+                    <label for="upiId">UPI ID</label>
+                    <input type="text" id="upiId" placeholder="username@upi" required>
+                </div>
+                <button type="submit" class="payment-button">Pay Now</button>
+            </form>
+        </div>
+
+        <!-- Card Payment Form -->
+        <div id="cardForm" class="payment-form" style="display: none;">
+            <h3>Card Payment</h3>
+            <form onsubmit="processCardPayment(event)">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cardName">Name on Card</label>
+                    <input type="text" id="cardName" required>
+                </div>
+                <button type="submit" class="payment-button">Pay Now</button>
+            </form>
+        </div>
+
+        <!-- Net Banking Form -->
+        <div id="netbankingForm" class="payment-form" style="display: none;">
+            <h3>Net Banking</h3>
+            <form onsubmit="processNetBankingPayment(event)">
+                <div class="form-group">
+                    <label for="bank">Select Bank</label>
+                    <select id="bank" required>
+                        <option value="">Select a bank</option>
+                        <option value="sbi">State Bank of India</option>
+                        <option value="hdfc">HDFC Bank</option>
+                        <option value="icici">ICICI Bank</option>
+                        <option value="axis">Axis Bank</option>
+                        <option value="pnb">Punjab National Bank</option>
+                    </select>
+                </div>
+                <button type="submit" class="payment-button">Continue to Net Banking</button>
+            </form>
+        </div>
+
+        <!-- COD Form -->
+        <div id="codForm" class="payment-form" style="display: none;">
+            <h3>Cash on Delivery</h3>
+            <form onsubmit="processCODPayment(event)">
+                <div class="cod-info">
+                    <p>Please keep exact change ready at the time of delivery.</p>
+                    <p>Additional COD charges may apply.</p>
+                </div>
+                <button type="submit" class="payment-button">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

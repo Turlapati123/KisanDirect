@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanDirect - Farmer's Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">KisanDirect</div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#marketplace">Marketplace</a>
+            <a href="#about">About</a>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="te">తెలుగు</option>
+                <option value="ta">தமிழ்</option>
+            </select>
+            <button class="cart-btn" onclick="openCart()">Cart (0)</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Direct Farm to Consumer Platform</h1>
+                <p>Empowering farmers with blockchain technology and AI-driven pricing</p>
+                <div class="hero-buttons">
+                    <button onclick="location.href='#marketplace'" class="primary-btn">Shop Now</button>
+                    <button onclick="location.href='#about'" class="secondary-btn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Platform Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800" alt="Blockchain">
+                    <h3>Blockchain Security</h3>
+                    <p>Secure and transparent transactions</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800" alt="AI">
+                    <h3>AI Price Prediction</h3>
+                    <p>Fair pricing based on market trends</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=800" alt="IoT">
+                    <h3>IoT Grading</h3>
+                    <p>Quality assessment using smart tech</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketplace" class="marketplace">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="product-container">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Address Modal -->
+    <div id="address-modal" class="modal">
+        <div class="modal-content">
+            <h2>Delivery Address</h2>
+            <form id="address-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Street Address" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="PIN Code" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <button type="submit" class="primary-btn">Continue to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <h2>Payment Method</h2>
+            <div class="payment-options">
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="upi">
+                    <span>UPI</span>
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="card">
+                    <span>Credit/Debit Card</span>
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="netbanking">
+                    <span>Net Banking</span>
+                </label>
+            </div>
+            <div id="payment-details"></div>
+            <button onclick="processPayment()" class="primary-btn">Pay Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About KisanDirect</h4>
+                <p>Empowering farmers through direct market access</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">Home</a>
+                <a href="#marketplace">Marketplace</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@kisandirect.com</p>
+                <p>Phone: 1800-123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "login": {
+    "title": "Welcome to KisanDirect",
+    "subtitle": "Login to your account",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "loginAs": "Login as",
+    "customer": "Customer",
+    "farmer": "Farmer",
+    "admin": "Admin",
+    "loginButton": "Login",
+    "noAccount": "Don't have an account?",
+    "register": "Register"
+  },
+  "register": {
+    "title": "Join KisanDirect",
+    "subtitle": "Create your account",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "registerAs": "Register as",
+    "farmDetails": {
+      "title": "Farm Details",
+      "farmName": "Farm Name",
+      "location": "Location",
+      "farmingType": "Type of Farming",
+      "organic": "Organic",
+      "conventional": "Conventional",
+      "mixed": "Mixed"
+    },
+    "registerButton": "Register",
+    "haveAccount": "Already have an account?",
+    "login": "Login"
+  },
+  "farmer": {
+    "dashboard": {
+      "title": "Farmer Dashboard",
+      "overview": "Overview",
+      "addProduct": "Add Product",
+      "inventory": "Inventory",
+      "sales": "Sales",
+      "stats": {
+        "totalSales": "Total Sales",
+        "activeProducts": "Active Products",
+        "pendingOrders": "Pending Orders",
+        "totalReviews": "Total Reviews"
+      }
+    },
+    "product": {
+      "title": "Add New Product",
+      "name": "Product Name",
+      "category": "Category",
+      "quantity": "Quantity Available (kg)",
+      "price": "Price per kg (₹)",
+      "season": "Growing Season",
+      "harvestDate": "Harvest Date",
+      "description": "Product Description",
+      "image": "Product Image",
+      "addButton": "Add Product",
+      "categories": {
+        "grains": "Grains & Pulses",
+        "vegetables": "Fresh Vegetables",
+        "fruits": "Fresh Fruits",
+        "organic": "Organic Products",
+        "dairy": "Dairy & Poultry"
+      },
+      "seasons": {
+        "kharif": "Kharif (Monsoon)",
+        "rabi": "Rabi (Winter)",
+        "zaid": "Zaid (Summer)",
+        "yearly": "Year-round"
+      }
+    }
+  },
+  "common": {
+    "logout": "Logout",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "active": "Active",
+    "inactive": "Inactive"
+  }
+}

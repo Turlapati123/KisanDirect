@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanDirect - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Welcome Back to KisanDirect</h2>
+                <p>Login to your account</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <div class="form-group">
+                    <label for="userType">Login as</label>
+                    <select id="userType" required>
+                        <option value="customer">Customer</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+
+            <div class="dashboard-buttons" id="dashboardLinks">
+                <button onclick="logout()">Logout</button>
+            </div>
+
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="logout.js"></script>
+    function handleLogin(event) { event.preventDefault(); const email = document.getElementById("email").value; const password = document.getElementById("password").value; const userType = document.getElementById("userType").value; // Basic Login Logic (For
+    demonstration) if (email === "admin@kisandirect.com" && password === "admin123") { alert(`Login successful as ${userType}!`); document.getElementById("dashboardLinks").style.display = "block"; } else { alert("Invalid email or password. Please try
+    again."); } } function redirectTo(page) { window.location.href = page; // Redirect to specified page }
+    </script>
+</body>
+
+</html>

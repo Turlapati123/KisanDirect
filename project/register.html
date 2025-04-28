@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanDirect - Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Join KisanDirect</h2>
+                <p>Create your account</p>
+            </div>
+
+            <form id="registerForm" onsubmit="handleRegister(event)" class="auth-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="userType">Register as</label>
+                    <select id="userType" required>
+                        <option value="customer">Customer</option>
+                        <option value="farmer">Farmer</option>
+                    </select>
+                </div>
+                <div id="farmerFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="farmName">Farm Name</label>
+                        <input type="text" id="farmName">
+                    </div>
+                    <div class="form-group">
+                        <label for="farmLocation">Farm Location</label>
+                        <input type="text" id="farmLocation">
+                    </div>
+                    <div class="form-group">
+                        <label for="farmingType">Type of Farming</label>
+                        <select id="farmingType">
+                            <option value="organic">Organic</option>
+                            <option value="conventional">Conventional</option>
+                            <option value="mixed">Mixed</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="auth-button">Register</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

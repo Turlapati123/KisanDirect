@@ -1,0 +1,87 @@
+{
+  "login": {
+    "title": "किसान डायरेक्ट में आपका स्वागत है",
+    "subtitle": "अपने खाते में लॉगिन करें",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "loginAs": "इस रूप में लॉगिन करें",
+    "customer": "ग्राहक",
+    "farmer": "किसान",
+    "admin": "व्यवस्थापक",
+    "loginButton": "लॉगिन करें",
+    "noAccount": "खाता नहीं है?",
+    "register": "रजिस्टर करें"
+  },
+  "register": {
+    "title": "किसान डायरेक्ट में शामिल हों",
+    "subtitle": "अपना खाता बनाएं",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल",
+    "phone": "फोन नंबर",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "registerAs": "इस रूप में रजिस्टर करें",
+    "farmDetails": {
+      "title": "खेत का विवरण",
+      "farmName": "खेत का नाम",
+      "location": "स्थान",
+      "farmingType": "खेती का प्रकार",
+      "organic": "जैविक",
+      "conventional": "पारंपरिक",
+      "mixed": "मिश्रित"
+    },
+    "registerButton": "रजिस्टर करें",
+    "haveAccount": "पहले से खाता है?",
+    "login": "लॉगिन करें"
+  },
+  "farmer": {
+    "dashboard": {
+      "title": "किसान डैशबोर्ड",
+      "overview": "अवलोकन",
+      "addProduct": "उत्पाद जोड़ें",
+      "inventory": "इन्वेंटरी",
+      "sales": "बिक्री",
+      "stats": {
+        "totalSales": "कुल बिक्री",
+        "activeProducts": "सक्रिय उत्पाद",
+        "pendingOrders": "लंबित आदेश",
+        "totalReviews": "कुल समीक्षाएं"
+      }
+    },
+    "product": {
+      "title": "नया उत्पाद जोड़ें",
+      "name": "उत्पाद का नाम",
+      "category": "श्रेणी",
+      "quantity": "उपलब्ध मात्रा (किलोग्राम)",
+      "price": "प्रति किलो मूल्य (₹)",
+      "season": "उगाने का मौसम",
+      "harvestDate": "कटाई की तिथि",
+      "description": "उत्पाद विवरण",
+      "image": "उत्पाद की छवि",
+      "addButton": "उत्पाद जोड़ें",
+      "categories": {
+        "grains": "अनाज और दालें",
+        "vegetables": "ताजी सब्जियां",
+        "fruits": "ताजे फल",
+        "organic": "जैविक उत्पाद",
+        "dairy": "डेयरी और मुर्गी पालन"
+      },
+      "seasons": {
+        "kharif": "खरीफ (मानसून)",
+        "rabi": "रबी (सर्दी)",
+        "zaid": "जायद (गर्मी)",
+        "yearly": "साल भर"
+      }
+    }
+  },
+  "common": {
+    "logout": "लॉगआउट",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "active": "सक्रिय",
+    "inactive": "निष्क्रिय"
+  }
+}
